@@ -1,15 +1,12 @@
-# elixir-nif-examples
+# poke — Memory management in a NIF.
 
-⚠️  Be sure to check out the other [branches](https://github.com/jeffkreeftmeijer/elixir-nif-example/branches) for more examples.
+⚠️  Use at your own risk.
 
-## A simple NIF
-
-An Elixir example that uses a Nif to implement `Nif.sum/2`.
+## Usage:
 
 ```
-$ iex -S mix
-Erlang/OTP 19 [erts-8.1] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
-Interactive Elixir (1.3.4) - press Ctrl+C to exit (type h() ENTER for help)
-iex(1)> Nif.sum(1,2)
-3
+{:ok, r} = Nif.new("tonći")
+"tonći" = Nif.fetch(r)
+:ok = Nif.poke(r, 0, ?T)
+"Tonći" = Nif.fetch(r)
 ```
