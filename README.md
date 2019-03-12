@@ -5,8 +5,8 @@
 ## Usage:
 
 ```
-{:ok, r} = Nif.new("tonći")
-"tonći" = Nif.fetch(r)
-:ok = Nif.poke(r, 0, ?T)
-"Tonći" = Nif.fetch(r)
+{:ok, r} = Poke.new("tonći")
+"tonći" = Poke.fetch(r)
+:ok = Poke.poke(r, 0, ?T)
+"Tonći" = Poke.fetch(r)
 ```

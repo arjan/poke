@@ -1,4 +1,5 @@
 defmodule Poke.Nif do
+  @moduledoc false
   @on_load :init
 
   def init do
