@@ -4,7 +4,7 @@
 
 ## Usage:
 
-```
+```elixir
 {:ok, r} = Poke.new("tonći")
 "tonći" = Poke.fetch(r)
 :ok = Poke.poke(r, 0, ?T)
